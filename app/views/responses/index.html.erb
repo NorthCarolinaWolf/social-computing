@@ -1,0 +1,23 @@
+<h2>All Requests:</h2><br>
+<% if @requests.nil?||@requests.length==0 %>
+No request yet!
+<% else %>
+<% @requests.each do |e|%>
+<%= link_to e.name , e%><br>
+<b>Responses:</b><br>
+<% responses=e.responses %>
+<% if responses.nil?||responses.length==0 %>
+No response yet!<br>
+<% else %>
+<% responses.each do |d|%>
+<%= link_to d.name , d%><br>
+<% end%>
+<% end%>
+<br><br>
+<% end%>
+<% end%>
+
+
+
+
+

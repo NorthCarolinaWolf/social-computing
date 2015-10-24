@@ -1,0 +1,18 @@
+<h2>Request Info:</h2><br>
+<b>Name:</b><br>
+<%= @request.name %><br>
+<b>Contact:</b><br>
+<%= @request.contact %><br>
+<b>Content:</b><br>
+<%= @request.content %><br>
+
+<br>
+<br>
+
+<div>
+    <%= link_to "make a response now" , controller:"responses", action:"new", r_id: @request.id %>
+</div>
+<br>
+<div>
+    <%= link_to "auto reponses", controller:"responses", action: "auto", r_id: @request.id %>
+</div>

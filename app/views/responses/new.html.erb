@@ -1,0 +1,27 @@
+<div>
+<h2>Request Info:</h2><br>
+<b>Name:</b><br>
+<%= @request.name %><br>
+<b>Contact:</b><br>
+<%= @request.contact %><br>
+<b>Content:</b><br>
+<%= @request.content %><br>
+</div>
+
+<h2>Response:</h2>
+<div>
+  <div>
+    <%= form_for(@response) do |f| %>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %><br>
+
+      <%= f.label :contact %><br>
+      <%= f.text_field :contact %><br>
+
+      <%= f.label :content%><br>
+      <%= f.text_field :content %><br>
+      <%= f.hidden_field :r_id, :value => @request.id %>
+      <%= f.submit "Create my response", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

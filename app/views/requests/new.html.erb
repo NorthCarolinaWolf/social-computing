@@ -1,0 +1,18 @@
+<h1>A new request</h1>
+
+<div >
+  <div>
+    <%= form_for(@request) do |f| %>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %><br>
+
+      <%= f.label :contact %><br>
+      <%= f.text_field :contact %><br>
+
+      <%= f.label :content%><br>
+      <%= f.text_field :content %><br>
+
+      <%= f.submit "Create myrequest", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
