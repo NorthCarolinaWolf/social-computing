@@ -10,9 +10,9 @@
 <br>
 
 <div>
-    <%= link_to "make a response now" , controller:"responses", action:"new", r_id: @request.id %>
+    <%= link_to "answer this question now" , controller:"responses", action:"new", r_id: @request.id %>
 </div>
 <br>
 <div>
-    <%= link_to "auto reponses", controller:"responses", action: "auto", r_id: @request.id %>
+    <%= link_to "auto reponses", controller:"responses", action: "auto", id: @request.id%>
 </div>

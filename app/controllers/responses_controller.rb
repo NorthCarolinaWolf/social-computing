@@ -9,7 +9,7 @@ class ResponsesController < ApplicationController
         @request=Request.find(params[:response][:r_id])
         @response=@request.responses.build(params.require(:response).permit(:name,:contact,:content))
         if @response.save
-            redirect_to root_path
+            redirect_to action:"show", id:@response.id
         else
             render new
         end
@@ -25,13 +25,10 @@ class ResponsesController < ApplicationController
     end
     
     def auto
-        print "======================="
-        print "enter auto"
-        print "==============================="
-        @request=Request.find(params[:r_id])
+        @request=Request.find(params[:id])
         @response=@request.responses.build(name:"autofill-name",contact:"autofill-contact",content:"autofill-content")
         if @response.save
-            redirect_to root_path
+            redirect_to action:"show", id:@response.id
         else
             render new
         end
