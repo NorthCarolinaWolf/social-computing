@@ -1,6 +1,6 @@
-<h2>All Requests:</h2><br>
+<h2>All Questions:</h2><br>
 <% if @requests.nil?||@requests.length==0 %>
-No request yet!
+No one has asked a question yet!
 <% else %>
 <% @requests.each do |e|%>
 <%= link_to e.name , e%><br>

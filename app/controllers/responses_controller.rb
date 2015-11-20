@@ -25,10 +25,8 @@ class ResponsesController < ApplicationController
     end
     
     def auto
-        @request=Request.find(params[:id])
-        @response=@request.responses.build(name:"autofill-name",contact:"autofill-contact",content:"autofill-content")
-        if @response.save
-            redirect_to action:"show", id:@response.id
+        if Response.fill(params[:id])
+            redirect_to action:"show", id:params[:id]
         else
             render new
         end
