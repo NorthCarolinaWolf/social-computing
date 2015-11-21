@@ -25,8 +25,9 @@ class ResponsesController < ApplicationController
     end
     
     def auto
-        if Response.fill(params[:id])
-            redirect_to action:"show", id:params[:id]
+        @response=Response.fill(params[:id])
+        if @response.save
+            redirect_to action:"show",id:@response.id
         else
             render new
         end

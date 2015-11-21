@@ -13,13 +13,13 @@ from sys import argv
 
 mapOfDictionaries = {}
 modOfVocab = 0
-stopwordsFile = "./Project-Data/stopwords.csv"
-miscFile = "./Project-Data/misc.txt"
+stopwordsFile = "./lib/Project-Data/stopwords.csv"
+miscFile = "./lib/Project-Data/misc.txt"
 stopWords = []
 split = []
 featureSet = set()
-dictDir = "./Project-Data/Dictionaries/"
-businessDir = "./Project-Data/"
+dictDir = "./lib/Project-Data/Dictionaries/"
+businessDir = "./lib/Project-Data/"
 businessData = {}
 
 def init():

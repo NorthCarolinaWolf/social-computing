@@ -8,7 +8,7 @@ import os
   
 lock = threading.Lock()
 numberOfThreads = 2
-dictDir =  "./Project-Data/Dictionaries/"
+dictDir =  "./lib/Project-Data/Dictionaries/"
 setOfDictFiles = {}
 mapOfDictionaries = {}
 
