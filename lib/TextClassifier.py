@@ -82,10 +82,11 @@ def readMessage(message):
         if type(contactData) == type('sample string'):
             print "None"
             return contactData
-        #print "ContactData before returning = ", contactData
-        printContact = contactData[0] + "$" + contactData[1] + "$" + contactData[2]
-        print printContact
-        return contactData
+        else:
+            #print "ContactData before returning = ", contactData
+            printContact = contactData[0] + "$" + contactData[1] + "$" + contactData[2]
+            print printContact
+            #return contactData
     #self.computeProbabilities(self, split)
 
 def cleanMessage(message):
@@ -147,7 +148,10 @@ def main(argv):
     readMessage(argv)
 
 if __name__ == "__main__":
-   main(sys.argv[1])   
+    str=''
+    for s in sys.argv[1:]:
+        str+=s+' '
+    main(str)   
 
 '''    
 init()
