@@ -79,6 +79,9 @@ def readMessage(message):
         featureSet = fSet
         #print("Features: ", featureSet)
         contactData = computeProbabilitiesAndCategorize()
+        if type(contactData) == type('sample string'):
+            print "None"
+            return contactData
         #print "ContactData before returning = ", contactData
         printContact = contactData[0] + "$" + contactData[1] + "$" + contactData[2]
         print printContact
@@ -91,7 +94,8 @@ def cleanMessage(message):
         message = message.replace("."," ")
         message = message.replace("?"," ")
         message = message.replace("!"," ")
-        return message      
+        message = message.replace("'s"," ")
+        return message.lower()      
 
 def computeProbabilitiesAndCategorize():
     finalProb = {}
