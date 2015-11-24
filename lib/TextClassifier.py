@@ -121,7 +121,10 @@ def computeProbabilitiesAndCategorize():
     #Now that category is computed, give the business contact details
     if(category[1] == 0):
         miscF = open(miscFile, 'a')
-        miscF.write(str(featureSet))
+        s = ""
+        for item in featureSet:
+        	s = s + item + " "
+        miscF.write(s)
         miscF.write("\n")
         miscF.close()
         #print "This is miscellaneous category service. We will get back to you"

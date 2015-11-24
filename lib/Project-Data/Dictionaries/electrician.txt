@@ -1,1 +1,1 @@
-wire,shock,tube,light,electricity,power,electrical,bulb,battery,charge,hot,switch,earthing,neutral,live,fire,fuse
+wire,shock,tube,light,electricity,power,electrical,bulb,battery,charge,hot,switch,earthing,neutral,live,fire,fuse,electric,outlet,plug,socket,switches,microwave,washer,induction,cooker,dryer
