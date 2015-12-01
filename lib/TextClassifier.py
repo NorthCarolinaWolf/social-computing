@@ -146,15 +146,14 @@ def computeProbabilitiesAndCategorize():
         return returnThis
 
 def main(argv):
-    #print "Argv = ", argv
     init()
     readMessage(argv)
 
 if __name__ == "__main__":
-    str=''
-    for s in sys.argv[1:]:
-        str+=s+' '
-    main(str)   
+    # str=''
+    # for s in sys.argv[1:]:
+    #     str+=s+' '
+    main(argv[1])   
 
 '''    
 init()

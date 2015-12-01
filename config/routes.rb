@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'homepages#home'
   get 'responses/auto' => 'responses#auto'
+  get 'responses/ranga' => 'responses#ranga'
   
   resources :responses
   resources :requests

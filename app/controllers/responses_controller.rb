@@ -32,4 +32,13 @@ class ResponsesController < ApplicationController
             render new
         end
     end
+    
+    def ranga
+        @response=Response.ranga(params[:id])
+        if @response.save
+            redirect_to action:"show",id:@response.id
+        else
+            render new
+        end
+    end
 end
